@@ -66,8 +66,9 @@ video {
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+
 }
 
 /*
@@ -99,11 +100,8 @@ main {
 
 article {
   display: grid;
-  width: 90vw;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, 100px); 
-  grid-template-columns: 1fr 1fr 1fr;   
-  grid-template-rows: minmax(300px, max-content);  
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: auto;  
   gap: 1rem;
 }
 
@@ -111,10 +109,12 @@ section {
   background: #ccc;
   padding:1rem;
 }
+
 nav ul {
   display: flex;
   background-color: #222;
   padding:1rem;
+  flex-direction: row-reverse;
 }
 
 nav li {
