@@ -200,27 +200,20 @@ section {
   padding:1rem;
 }
 
+/* this is the code responsive story */
+
 h1.story:before {
-  content: "Beginning ...";
+  content: "Here's where our story begins ...";
 }
 
 @media screen and (min-width: 500px) {
   h1.story:before {
-    content: "First few words ...";
+    content: "... and here's the next few words ...";
   }
 }
 
-@media screen and (min-width: 600px) {
-  h1.story:before {
-    content: "next few words";
-  }
-}
 
-@media screen and (min-width: 700px) {
-  h1.story:before {
-    content: "and more words";
-  }
-}
+
 
 
 /* this is code example for typography */
