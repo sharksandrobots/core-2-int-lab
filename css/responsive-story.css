@@ -6,200 +6,84 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Oswald:wght@300;500&display=swap');
+
+ /* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea {
+  margin: 0;
+  border: none;
+  font-family: 'Lucida Grande', sans-serif;
+  font-size: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
-   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Source+Sans+Pro&display=swap');
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  padding:1.5rem;
-  background-color:#fff;
 }
-
-ul {
-  list-style: none;
-}
-
-figure {
-  padding:0;
-  margin:0;
-}
-
-/* unvisited link */
-a:link {
-  color: #000;
-  font-family: 'Source Sans Pro', sans-serif;
-
-}
-
-/* visited link */
-a:visited {
-  color: #000;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-  text-decoration: none;
-}
-
-/* selected link */
-a:active {
-  color: #000;
-}
-
-.unstyled-link{
-  text-decoration: none;
-  color:black;
-}
-
-/* Default CSS grid for smaller viewports */
-
-
-main {
-  width: 90vw;
-  margin: 0 auto;
-}
-
-.intro-block {
-  display:grid;
-  grid-template-columns: auto;  
-  grid-auto-rows:min-content;
-  gap:1rem;
-  padding-bottom:2rem;
-  border-bottom:1px solid #dadada;
-}
-
-.project-block {
-  display:grid;
-  grid-template-columns: auto;  
-  grid-auto-rows:min-content;
-  gap:1rem;
-  padding-bottom:2rem;
-  border-bottom:1px solid #dadada;
-}
-
-.project-block_title {
-  margin-top:1rem;
-}
-
-/* This code is for 30em/480px and above */
-
-@media (min-width: 30em) {
-  main {
-    width: 70vw;
-    margin: 0 auto;
-  }
-  
-  .intro-block {
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);  
-    grid-auto-rows:min-content;
-    gap:2rem;
-    padding-bottom:2rem;
-    border-bottom:1px solid #dadada;
-  }
-  
-  header {
-    grid-column:1/6;
-  }
-  
-  .intro {
-    grid-column: 1 / 4;
-  }
-  
-  .short-bio {
-    grid-column: 1 / 3;
-  }
-  
-  .lead-img {
-    grid-column: 3 / 6;
-  }
-  
-  .project-block {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
-    grid-auto-rows:min-content;
-    gap:2rem;
-    padding-bottom:2rem;
-    border-bottom:1px solid #dadada;
-  }
-  
-  .project-block_section-head {
-    grid-column: 1 / 4;
-    grid-row:1;
-  }
-  
-  .project-block_title {
-    margin-top:1rem;
-  }
-  
-  .intro-block {
-    grid-column:1 / 3;
-  }
-
-}
-
-/* Typography */
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lora', serif;
-  font-weight:500;
-  margin:0;
-  padding:0;
-}
-
-h1 {
-  font-size:3.157rem;
-  margin-bottom:1.25rem;
-}
-
-h2 {
-  font-size:2.369rem;
-  margin-bottom:1.25rem;
-}
-
-h3 {
-  font-size:1.777rem;
-  margin-bottom:1rem;
-}
-
-h4 {
-  font-size:1.333rem;
-  margin-bottom:1rem;
-}
-
-h5 {
-  font-size:1;
-  margin-bottom:.5rem;
-}
-
-
-p{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding:0;
-  margin:0;
-  margin-bottom:1rem;
-  color:var(--body-text-color);
-}
-
-.pull-quote {
-  font-size: 2.25rem;
-  font-family: 'Lora', serif;
-  font-style: italic;
-  font-weight:400;  
-  line-height: 1.5;
-  padding:2rem;
-}
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -250,9 +134,9 @@ video {
 }
 
 img {
-
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+
 }
 
 /*
@@ -276,6 +160,197 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+   body {
+    color: #222;
+    padding-top: 2rem;
+    font-family: "Bitter", Arial, sans-serif;
+  }
+
+
+    :root {
+      --text-base-size: 1rem;
+      --text-scale-ratio: 1.333;
+      --text-size-small: 1rem;
+      --text-size-xsmall: .813rem;
+      /* type scale */
+      --text-x1: calc(var(--text-base-size) * var(--text-scale-ratio));
+      --text-x2: calc(var(--text-x1) * var(--text-scale-ratio));
+      --text-x3: calc(var(--text-x2) * var(--text-scale-ratio));
+      --text-x4: calc(var(--text-x3) * var(--text-scale-ratio));
+      --text-x5: calc(var(--text-x4) * var(--text-scale-ratio));
+      --text-x6: calc(var(--text-x5) * var(--text-scale-ratio));
+    }
+  
+
+main {
+  background: #fff;  
+  width: 80vw;
+  margin: 0 auto;
+}
+
+article {
+  display: grid;
+  grid-template-columns: auto;  
+  grid-template-rows: auto;  
+  gap: 1rem;
+}
+
+section {
+  padding:1rem;
+}
+
+h1.story:before {
+  content: "Beginning ...";
+}
+
+@media screen and (min-width: 500px) {
+  h1.story:before {
+    content: "First few words ...";
+  }
+}
+
+@media screen and (min-width: 600px) {
+  h1.story:before {
+    content: "next few words";
+  }
+}
+
+@media screen and (min-width: 700px) {
+  h1.story:before {
+    content: "and more words";
+  }
+}
+
+
+/* this is code example for typography */
+
+p {
+  font-family: 'Bitter', serif;
+  font-size: var(--text-base-size);
+  margin-bottom: 1 rem;
+  line-height: 150%;
+}
+
+.typescale-x6 {
+  font-size: var(--text-x6);
+}
+
+.typescale-x5 {
+  font-size: var(--text-x5);
+}
+
+.typescale-x4 {
+  font-size: var(--text-x4);
+}
+
+.typescale-x3 {
+  font-size: var(--text-x3);
+}
+
+.typescale-x2 {
+  font-size: var(--text-x2);
+}
+
+.typescale-x1 {
+  font-size: var(--text-x1);
+}
+
+.typescale-base {
+  font-size: var(--text-base-size);
+  line-height: 150%;
+}
+
+.typescale-small {
+  font-size: var(--text-size-small);
+  line-height: 150%;
+}
+
+.typescale-xsmall {
+  font-size: var(--text-size-xsmall);
+  line-height: 150%;
+}
+
+.all-caps {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.eye-brow {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: var(--text-base-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--text-x6);
+  line-height: 110%;
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--text-x5);
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 110%;
+}
+
+h3 {
+  font-size: var(--text-x4);
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h4 {
+  font-size: var(--text-x3);
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h5 {
+  font-size: var(--text-x2);
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h6 {
+  font-size: var(--text-x1);
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.core-lab-sans-medium {
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 500;
+  line-height: 100%;
+
+}
+
+.core-lab-sans {
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 300;
+  line-height: 100%;
+
+}
+
+.core-lab-serif {
+  font-family: 'Bitter', serif;
+  font-weight: 900;
+  line-height: 100%;
+
+}
+
+/* end code example for typography */
+
 
 /* ==========================================================================
    Helper classes
