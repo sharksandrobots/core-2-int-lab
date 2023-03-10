@@ -200,6 +200,7 @@ section {
   padding:1rem;
 }
 
+
 /* this is the code responsive story */
 
 h1.story:before {
@@ -211,9 +212,6 @@ h1.story:before {
     content: "... and here's the next few words ...";
   }
 }
-
-
-
 
 
 /* this is code example for typography */
