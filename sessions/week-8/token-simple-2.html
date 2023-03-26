@@ -8,19 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	 <!-- Link to my stylesheet -->
-	 <link rel="stylesheet" href="../../css/json-example.css">
-	<title>Start up</title>
+	 <link rel="stylesheet" href="../../css/normalize.css">
+	 <link rel="stylesheet" href="../../css/main.css">	<title>Start up</title>
 </head>
 <body>
 <h1>Fetch API for design tokens</h1>
 <section id="token-data"></section>
-<script>
-	fetch('token-simple.json')
-    .then(response => response.json())
-	.then (data => {
-        console.log(data)
-        document.querySelector("#token-data").innerHTML = JSON.stringify(data)
-    })
-</script>
+
+<script src="token-simple-2.js"></script> <!-- Link to the javascript file -->
+
 </body>
 </html>
