@@ -5,7 +5,6 @@ fetch(myRequest)
   .then((response) => response.json())
   .then((data) => {
 	console.log(data);
-	console.log(data.colors[1].Hexcode);
 
     for (const color of data.colors) {
       const listItem = document.createElement("li");
@@ -15,9 +14,11 @@ fetch(myRequest)
       listItem.appendChild(
         document.createElement("strong")
       ).style.background = `${color.Hexcode}`;
-      myList.appendChild(listItem);
+      myList.appendChild(listItem);      
     }
-	console.log(data.colors[1].Hexcode);
+
+	console.log(data.colors[0].url);
+  document.getElementById("links").innerHTML = (`<a href="${data.colors[2].url}">Color link</a>`);
 
   })
   .catch(console.error);
